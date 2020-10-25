@@ -8,7 +8,8 @@ namespace Wagons
         {
             do
             {
-                Train train = new Train(100000);
+                Train train = new Train(50);
+                //train.OnLight();
 
                 Res res = Algoritm_1(train);
 
@@ -23,9 +24,10 @@ namespace Wagons
         {
             Movement movement = new Movement(train);
             Wagon startWagon = movement.CurrentWagon;
-
             startWagon.OnLight();
-
+            movement.Back();
+            movement.CurrentWagon.OffLight();
+            movement.Forward();
 
             int countWagons = Tuda(movement);
 

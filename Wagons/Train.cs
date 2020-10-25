@@ -64,7 +64,7 @@ namespace Wagons
             }
         }
 
-        void OffLight()
+        public void OffLight()
         {
             for (int i = 0; i < CountWagons; i++)
             {
@@ -72,7 +72,7 @@ namespace Wagons
             }
         }
 
-        void OnLight()
+        public void OnLight()
         {
             for (int i = 0; i < CountWagons; i++)
             {
