@@ -89,5 +89,29 @@ namespace Wagons
         {
             return Wagons.Count(x => !x.Light);
         }
+
+
+        public Train GetCopy()
+        {
+            Train copy = new Train(Wagons.Length);
+
+            for (int i = 0; i < Wagons.Length; i++)
+            {
+                copy.Wagons[i].Light = Wagons[i].Light;
+            }
+            
+            return copy;
+        }
+
+        public override string ToString()
+        {
+            string str = string.Empty;
+            foreach (var wagon in Wagons)
+            {
+                str += wagon.Light + "\t";
+            }
+
+            return str;
+        }
     }
 }
